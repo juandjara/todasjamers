@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityStandardAssets.Characters.ThirdPerson;
 
+[RequireComponent(typeof(ThirdPersonCharacter))]
+[RequireComponent(typeof(NavMeshAgent))]
 public class StateController : MonoBehaviour {
 
 	public State currentState;
@@ -10,20 +13,26 @@ public class StateController : MonoBehaviour {
 	public Transform eyes;
 	public State remainState;
 
-	[HideInInspector] public NavMeshAgent navMeshAgent;
-	// TODO Create PugAttack script and assign it here
-	//[HideInInspector] public Complete.TankShooting tankShooting;
+		//[HideInInspector] public PugAttack pugAttack;
 	[HideInInspector] public List<Transform> wayPointList;
 	[HideInInspector] public int nextWayPoint;
 	[HideInInspector] public Transform chaseTarget;
 	[HideInInspector] public float stateTimeElapsed;
 
+	// the navmesh agent required for the path finding
+  [HideInInspector] public NavMeshAgent navMeshAgent { get; private set; }
+  // the character we are controlling, responsible for movement
+  [HideInInspector] public ThirdPersonCharacter character { get; private set; }
+  
 	private bool aiActive;
 
 	void Awake() {
 		// TODO get PugAttack instance from component
-		//tankShooting = GetComponent<Complete.TankShooting> ();
+		//tankShooting = GetComponent<PugAttack> ();
 		navMeshAgent = GetComponent<NavMeshAgent> ();
+		navMeshAgent.updateRotation = false;
+    navMeshAgent.updatePosition = true;
+		character = GetComponent<ThirdPersonCharacter>();
 	}
 
 	void Update() {

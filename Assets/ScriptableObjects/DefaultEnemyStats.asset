@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 1
   lookRange: 40
-  lookSphereCastRadius: 1
+  lookSphereCastRadius: 0.5
   attackRange: 1
   attackRate: 1
   attackForce: 15
