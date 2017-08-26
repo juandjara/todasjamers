@@ -23,11 +23,22 @@ public class ColisionadorCroquetas : MonoBehaviour {
 		if(other.gameObject.CompareTag("croquetas")){
 			//Eliminamos croqueta
 			Destroy(other.gameObject);
+			
+
+			//Creamos punto de entrega
+			ManagerCroquetas.instance.spawnObjetivo();
+
+		}else if(other.gameObject.CompareTag("puntoEntrega")){
+
+			Destroy(other.gameObject);
+
+
 			//Sumamos puntos
 			ManagerCroquetas.instance.puntos ++;
 			//creamos otra croqueta
 			ManagerCroquetas.instance.spawnCroqueta();
-
+			
+			
 		}
 		
 	}
