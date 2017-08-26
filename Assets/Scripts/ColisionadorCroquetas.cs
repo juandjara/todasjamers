@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Linq;
 public class ColisionadorCroquetas : MonoBehaviour {
 
 	// Use this for initialization
@@ -26,6 +26,7 @@ public class ColisionadorCroquetas : MonoBehaviour {
 			//Sumamos puntos
 			ManagerCroquetas.instance.puntos ++;
 			//creamos otra croqueta
+			ManagerCroquetas.instance.spawnCroqueta();
 
 		}
 		
