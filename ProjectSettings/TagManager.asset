@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - AI Points 1
+  - croquetas
+  - spawnPoint
+  - objetivo
+  - puntoEntrega
   layers:
   - Default
   - TransparentFX
