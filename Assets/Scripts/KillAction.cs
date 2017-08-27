@@ -11,7 +11,9 @@ public class KillAction : Action {
 	void Kill(StateController controller) {
 		RaycastHit hit;
 		Vector3 lookRayDirection = controller.eyes.forward.normalized * controller.enemyStats.attackRange;
-		Debug.DrawRay(controller.eyes.position, lookRayDirection, Color.red);
+		Vector3 lookRayOrigin = controller.eyes.position;
+		lookRayOrigin.y -= 1;
+		Debug.DrawRay(lookRayOrigin, lookRayDirection, Color.red);
 		bool AISeesPlayer = Physics.SphereCast(
 			controller.eyes.position,
 			controller.enemyStats.lookSphereCastRadius,
@@ -22,8 +24,10 @@ public class KillAction : Action {
 		
 		if(AISeesPlayer) {
 			bool AICanKill = controller.CheckIfCountdownElapsed(controller.enemyStats.attackRate);
+			TextManager.instance.setWarning("Te han dao");			
 			if(AICanKill) {
 				// kill player if it has no extra points
+				//TextManager.instance.waitAndClearWarning(3f);
 			}
 		}
 	}

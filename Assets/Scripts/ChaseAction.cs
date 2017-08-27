@@ -10,6 +10,11 @@ public class ChaseAction : Action {
 	private void Chase(StateController controller) {
 		controller.navMeshAgent.destination = controller.chaseTarget.position;
 		Vector3 velocity = controller.navMeshAgent.desiredVelocity;
-		controller.character.Move(velocity, false, false);
+		bool distanceThreshold = controller.navMeshAgent.remainingDistance > controller.navMeshAgent.stoppingDistance;
+		if(distanceThreshold) {
+			controller.character.Move(velocity, false, false);
+		} else {
+			controller.navMeshAgent.isStopped = true;
+		}
 	}
 }

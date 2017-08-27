@@ -8,6 +8,7 @@ public class TextManager : MonoBehaviour {
 	public static TextManager instance {get; private set;}
 	public Text pointText;
 	public Text objectiveText;
+	public Text warningText;
 
 	void Awake() {
 		if(instance == null) {
@@ -23,6 +24,18 @@ public class TextManager : MonoBehaviour {
 	}
 	public void setObjective(string name) {
 		objectiveText.text = "Objetivo: "+name;
+	}
+	public void setWarning(string warning) {
+		warningText.text = warning;
+	}
+
+	public void waitAndClearWarning(float seconds) {
+		StartCoroutine(_waitAndClearWarning(seconds));
+	}
+
+	private IEnumerator _waitAndClearWarning(float seconds) {
+		yield return new WaitForSeconds(seconds);
+		warningText.text = "";
 	}
 
 }

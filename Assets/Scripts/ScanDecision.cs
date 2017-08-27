@@ -11,8 +11,10 @@ public class ScanDecision : Decision {
 
 	private bool Scan(StateController controller) {
 		controller.navMeshAgent.isStopped = true;
+		controller.character.Move(Vector3.zero, false, false);
+		
 		float yRotation = controller.enemyStats.searchingTurnSpeed * Time.deltaTime;
 		controller.transform.Rotate(0, yRotation, 0);
-		return  controller.CheckIfCountdownElapsed(controller.enemyStats.searchDuration);
+		return controller.CheckIfCountdownElapsed(controller.enemyStats.searchDuration);
 	}
 }
