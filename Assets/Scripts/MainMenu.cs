@@ -10,7 +10,6 @@ public class MainMenu : MonoBehaviour {
 
 	public static MainMenu instance { get; private set; }
 
-	public GameObject pug;
 
 	void Awake() {
 		if(instance == null) {
@@ -20,12 +19,7 @@ public class MainMenu : MonoBehaviour {
 		}
 		DontDestroyOnLoad(this.gameObject);
 	}
-	// Use this for initialization
-	void Start () {
 
-		pug.GetComponent<Animation>().Play();
-		
-	}
 	
 	// Update is called once per frame
 	void Update () {
