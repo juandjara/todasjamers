@@ -14,6 +14,7 @@ public class ChaseAction : Action {
 		if(distanceThreshold) {
 			controller.character.Move(velocity, false, false);
 		} else {
+			controller.character.Move(Vector3.zero, false, false);			
 			controller.navMeshAgent.isStopped = true;
 		}
 	}
