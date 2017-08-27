@@ -62,8 +62,11 @@ public class ManagerCroquetas : MonoBehaviour {
 	}
 
 	public void spawnObjetivo(){
-
-		Instantiate(objetivoPrefab, zonaObjetivos[ Random.Range(0,zonaObjetivos.Count)]);		
+		int obj=  Random.Range(0,zonaObjetivos.Count);
+		Instantiate(objetivoPrefab, zonaObjetivos[obj]);
+		GameObject gui=GameObject.Find("GUI_TEXT");
+		
+		//zonaObjetivos[obj].name;		
 
 
 	}
