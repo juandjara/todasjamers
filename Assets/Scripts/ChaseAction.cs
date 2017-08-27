@@ -9,6 +9,7 @@ public class ChaseAction : Action {
 	}
 	private void Chase(StateController controller) {
 		controller.navMeshAgent.destination = controller.chaseTarget.position;
-		controller.navMeshAgent.isStopped = false;
+		Vector3 velocity = controller.navMeshAgent.desiredVelocity;
+		controller.character.Move(velocity, false, false);
 	}
 }
