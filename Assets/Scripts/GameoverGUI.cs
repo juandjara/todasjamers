@@ -18,7 +18,7 @@ public class GameoverGUI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(Input.anyKey) {
-			SceneManager.LoadScene("casa - gabo");
+			SceneManager.LoadScene("game");
 		}
 	}
 }
