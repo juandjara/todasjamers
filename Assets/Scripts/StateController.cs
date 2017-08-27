@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityStandardAssets.Characters.ThirdPerson;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(ThirdPersonCharacter))]
 [RequireComponent(typeof(NavMeshAgent))]
@@ -69,5 +70,11 @@ public class StateController : MonoBehaviour {
 
 	private void OnExitState() {
 		stateTimeElapsed = 0;
+	}
+
+	void OnCollisionEnter(Collision other) {
+		if (other.gameObject.CompareTag("Player")) {
+			SceneManager.LoadScene("gameover");
+		}
 	}
 }
