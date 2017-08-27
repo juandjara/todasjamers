@@ -12,20 +12,18 @@ public class LookDecision : Decision {
 		RaycastHit hit;
 		Vector3 lookRayDirection = controller.eyes.forward.normalized * controller.enemyStats.lookRange;
 		Debug.DrawRay(controller.eyes.position, lookRayDirection, Color.green);
-		bool AISeesPlayer = Physics.BoxCast(
+		bool AISeesPlayer = Physics.SphereCast(
 			controller.eyes.position,
-			new Vector3(controller.enemyStats.lookSphereCastRadius, controller.enemyStats.lookSphereCastRadius, controller.enemyStats.lookSphereCastRadius),
+			controller.enemyStats.lookSphereCastRadius,
 			controller.eyes.forward,
 			out hit,
-			Quaternion.identity,
 			controller.enemyStats.lookRange  
 		) && hit.collider.CompareTag("Player");
-		
+
 		if(AISeesPlayer) {
 			TextManager.instance.setWarning("UN PUG TE HA VISTO");
+			TextManager.instance.waitAndClearWarning(2f);
 			controller.chaseTarget = hit.transform;
-		} else {
-			TextManager.instance.setWarning("");
 		}
 		return AISeesPlayer;
 	}
