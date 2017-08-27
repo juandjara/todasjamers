@@ -6,7 +6,7 @@ public class ColisionadorCroquetas : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		PlayerPrefs.SetFloat("puntos", 0);
 	}
 	
 	// Update is called once per frame
