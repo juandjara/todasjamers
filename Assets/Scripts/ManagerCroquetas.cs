@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class ManagerCroquetas : MonoBehaviour {
@@ -8,16 +9,12 @@ public class ManagerCroquetas : MonoBehaviour {
 
 	public static ManagerCroquetas instance { get; private set; }
 	public int puntos;
-	public bool entregaCroqueta;
 	public List<Transform> zonasSpawnCroquetas;
 	public List<Transform> zonaObjetivos;
-
-
-
-
-
 	public GameObject croquetaPrefab;
 	public GameObject objetivoPrefab;
+
+	public Text infoText;
 
 
 
@@ -32,6 +29,8 @@ public class ManagerCroquetas : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
+
+
 
 		//Iniciamos spawns de croquetas
 		foreach(GameObject item in GameObject.FindGameObjectsWithTag("spawnPoint")){
@@ -57,7 +56,9 @@ public class ManagerCroquetas : MonoBehaviour {
 	public void spawnCroqueta(){
 		//spawneamos croqueta en sitio al azar de la lista:
 
-		Instantiate(croquetaPrefab, zonasSpawnCroquetas[ Random.Range(0,zonasSpawnCroquetas.Count)]);		
+		Instantiate(croquetaPrefab, zonasSpawnCroquetas[ Random.Range(0,zonasSpawnCroquetas.Count)]);
+		infoText.text="Puntos: "+ puntos +"\nObjetivo: conseguir croqueta";	
+	
 
 	}
 
@@ -66,7 +67,7 @@ public class ManagerCroquetas : MonoBehaviour {
 		Instantiate(objetivoPrefab, zonaObjetivos[obj]);
 		GameObject gui=GameObject.Find("GUI_TEXT");
 		
-		//zonaObjetivos[obj].name;		
+		infoText.text="Puntos: "+ puntos +"\nObjetivo: "+zonaObjetivos[obj].name;	
 
 
 	}

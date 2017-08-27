@@ -810,13 +810,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puntos: 0
-  entregaCroqueta: 0
   zonasSpawnCroquetas: []
   zonaObjetivos: []
   croquetaPrefab: {fileID: 1376762329168568, guid: d7db7ce8dc660024ab287877b84b8d9a,
     type: 2}
   objetivoPrefab: {fileID: 1146816977558380, guid: 82bd22e48b2aa7c4db8c207ade68eb80,
     type: 2}
+  infoText: {fileID: 2035933401}
 --- !u!4 &1797579390
 Transform:
   m_ObjectHideFlags: 0
@@ -946,9 +946,9 @@ RectTransform:
   m_Father: {fileID: 468035302}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -228, y: 126}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 90, y: -34}
   m_SizeDelta: {x: 160, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2035933401
@@ -977,10 +977,10 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 'Puntos: 0
