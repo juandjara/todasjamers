@@ -4,8 +4,6 @@ using UnityEngine;
 
 [RequireComponent(typeof(StateController))]
 public class AIController : MonoBehaviour {
-  // the character we are followings
-  [HideInInspector] public Transform target;
   // the handler for the AI States
   [HideInInspector] public StateController stateController;
   // the list of positions that AI goes when patrolling
