@@ -35,6 +35,7 @@ public class ColisionadorCroquetas : MonoBehaviour {
 
 			//Sumamos puntos
 			ManagerCroquetas.instance.puntos ++;
+			PlayerPrefs.SetFloat("puntos", ManagerCroquetas.instance.puntos);
 			//creamos otra croqueta
 			ManagerCroquetas.instance.spawnCroqueta();
 			
