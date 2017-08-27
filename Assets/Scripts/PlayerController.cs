@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour {
 	void getInput() {
 		forwardInput = CrossPlatformInputManager.GetAxis("Vertical");
 		turnInput = CrossPlatformInputManager.GetAxis("Horizontal");
-		animator.SetFloat("Forward", forwardInput);
+		animator.SetFloat("Forward", Mathf.Abs(forwardInput));
 	}
 
 	void Update() {
