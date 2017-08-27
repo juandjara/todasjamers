@@ -10,6 +10,7 @@ public class GameoverGUI : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		croqueText = GetComponent<Text>();
 		float puntos = PlayerPrefs.GetFloat("puntos", 0);
 		croqueText.text = "Has rescatado a "+puntos+" croquetas";
 	}
