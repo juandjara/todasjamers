@@ -12,7 +12,7 @@ public class PatrolAction : Action {
 		bool distanceThreshold = controller.navMeshAgent.remainingDistance <= controller.navMeshAgent.stoppingDistance;
 
 		if(distanceThreshold && !controller.navMeshAgent.pathPending) {
-			int nextWaypoint = (controller.nextWayPoint + 1) % controller.wayPointList.Count;
+			int nextWaypoint =Random.Range(0,controller.wayPointList.Count);
 			controller.nextWayPoint = nextWaypoint;
 		} else {
 			controller.navMeshAgent.isStopped = false;
