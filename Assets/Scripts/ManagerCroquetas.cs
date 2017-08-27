@@ -12,6 +12,11 @@ public class ManagerCroquetas : MonoBehaviour {
 	public GameObject croquetaPrefab;
 	public GameObject objetivoPrefab;
 
+	//DIOS PERDONAME
+	public GameObject pug;
+
+	public AudioSource ladrido;
+
 	void Awake() {
 		if(instance == null) {
 			instance = this;
@@ -39,6 +44,8 @@ public class ManagerCroquetas : MonoBehaviour {
 	public void spawnCroqueta(){
 		//spawneamos croqueta en sitio al azar de la lista:
 		Instantiate(croquetaPrefab, zonasSpawnCroquetas[ Random.Range(0,zonasSpawnCroquetas.Count)]);
+		Instantiate(pug, zonasSpawnCroquetas[ Random.Range(0,zonasSpawnCroquetas.Count)]);
+
 		TextManager.instance.setPoints(puntos);
 		TextManager.instance.setObjective("conseguir croqueta");
 	}
