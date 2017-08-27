@@ -15,6 +15,7 @@ public class PatrolAction : Action {
 			int nextWaypoint = (controller.nextWayPoint + 1) % controller.wayPointList.Count;
 			controller.nextWayPoint = nextWaypoint;
 		} else {
+			controller.navMeshAgent.isStopped = false;
 			Vector3 velocity = controller.navMeshAgent.desiredVelocity;
 			controller.character.Move(velocity, false, false);
 		}
