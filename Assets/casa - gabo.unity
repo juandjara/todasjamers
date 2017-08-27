@@ -39,7 +39,7 @@ RenderSettings:
   m_CustomReflection: {fileID: 1683134517039983843, guid: 0000000000000000d000000000000000,
     type: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.95066124, g: 1.0229884, b: 1.0658203, a: 1}
+  m_IndirectSpecularColor: {r: 0.9508206, g: 1.0231649, b: 1.065984, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -907,6 +907,10 @@ Prefab:
     - target: {fileID: 4546971725225630, guid: d3517bf353253d44a89917ca8984cf18, type: 2}
       propertyPath: m_LocalRotation.w
       value: 0.9764928
+      objectReference: {fileID: 0}
+    - target: {fileID: 1592521051632660, guid: d3517bf353253d44a89917ca8984cf18, type: 2}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d3517bf353253d44a89917ca8984cf18, type: 2}
@@ -2276,6 +2280,8 @@ MonoBehaviour:
     type: 2}
   objetivoPrefab: {fileID: 1146816977558380, guid: 82bd22e48b2aa7c4db8c207ade68eb80,
     type: 2}
+  pug: {fileID: 1712236943691452, guid: 44c95497c729ffb4daf45bc7c45bb662, type: 2}
+  ladrido: {fileID: 0}
 --- !u!4 &1797579390
 Transform:
   m_ObjectHideFlags: 0
@@ -2614,19 +2620,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4396127887193168, guid: 44c95497c729ffb4daf45bc7c45bb662, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.097600445
+      value: 0.09760043
       objectReference: {fileID: 0}
     - target: {fileID: 4396127887193168, guid: 44c95497c729ffb4daf45bc7c45bb662, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.17510827
+      value: 0.17510825
       objectReference: {fileID: 0}
     - target: {fileID: 4396127887193168, guid: 44c95497c729ffb4daf45bc7c45bb662, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0.6690463
+      value: 0.6690462
       objectReference: {fileID: 0}
     - target: {fileID: 4396127887193168, guid: 44c95497c729ffb4daf45bc7c45bb662, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.71567345
+      value: 0.7156734
       objectReference: {fileID: 0}
     - target: {fileID: 195755154818263280, guid: 44c95497c729ffb4daf45bc7c45bb662,
         type: 2}
@@ -2671,6 +2677,22 @@ Transform:
   m_Father: {fileID: 415363858}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2084133076 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1592521051632660, guid: d3517bf353253d44a89917ca8984cf18,
+    type: 2}
+  m_PrefabInternal: {fileID: 695017094}
+--- !u!114 &2084133082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2084133076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301a87d9c3a78ca48af90b3a2a903f11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2130738893
 GameObject:
   m_ObjectHideFlags: 0

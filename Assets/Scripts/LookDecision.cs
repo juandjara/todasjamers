@@ -24,6 +24,7 @@ public class LookDecision : Decision {
 			TextManager.instance.setWarning("UN PUG TE HA VISTO");
 			TextManager.instance.waitAndClearWarning(2f);
 			controller.chaseTarget = hit.transform;
+			controller.GetComponent<AudioSource>().Play();
 		}
 		return AISeesPlayer;
 	}
