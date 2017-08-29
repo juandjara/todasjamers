@@ -4,14 +4,14 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 12
-  productGUID: f42f8325c37965f4e81ac2e6e81ca086
+  productGUID: eb1cf94f751a8a240b1737142b4ffcb8
   AndroidProfiler: 0
   defaultScreenOrientation: 4
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: croqueto2
+  productName: putoerror
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -512,14 +512,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: croqueto2
+  metroPackageName: putoerror
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: croqueto2
+  metroApplicationDescription: putoerror
   wsaImages: {}
   metroTileShortName: 
   metroCommandLineArgsFile: 
@@ -593,8 +593,8 @@ PlayerSettings:
   cloudServicesEnabled: {}
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 71e3da5c-3108-4896-9152-86ddc787bec6
-  projectName: croqueto2
+  cloudProjectId: a2653d73-f19d-4c84-b9af-f55aea397639
+  projectName: putoerror
   organizationId: gabboman
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
